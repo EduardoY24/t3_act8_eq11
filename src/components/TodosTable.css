@@ -1,0 +1,139 @@
+.todos-card {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.todos-message {
+  padding: 24px;
+  text-align: center;
+  color: var(--color-texto-suave);
+}
+
+.todos-message-error,
+.todos-banner-error {
+  color: var(--color-peligro);
+  background-color: var(--color-peligro-claro);
+}
+
+.todos-banner-error {
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+.todos-toolbar {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.todos-search {
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.todos-select {
+  padding: 10px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: var(--color-blanco);
+}
+
+.todos-search:focus,
+.todos-select:focus {
+  outline: 2px solid var(--color-primario);
+  border-color: transparent;
+}
+
+.todos-new-button {
+  margin-left: auto;
+}
+
+.todos-table-wrapper {
+  overflow-x: auto;
+}
+
+.todos-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.todos-table th {
+  text-align: left;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-texto-suave);
+  background-color: var(--color-fondo);
+  border-top: 1px solid var(--color-borde);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.todos-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.todos-title {
+  font-weight: 500;
+}
+
+.todos-empty {
+  text-align: center;
+  color: var(--color-texto-suave);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-pending {
+  background-color: var(--color-primario-claro);
+  color: var(--color-primario);
+}
+
+.badge-done {
+  background-color: var(--color-exito-claro);
+  color: var(--color-exito);
+}
+
+.todos-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-texto-suave);
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+}
+
+.icon-button:hover {
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+}
+
+.icon-button-danger:hover {
+  background-color: var(--color-peligro-claro);
+  color: var(--color-peligro);
+}

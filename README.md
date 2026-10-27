@@ -14,6 +14,10 @@ Mini sistema web en React con login, sidebar, navbar y una tabla de tareas con f
 
 ## Proyecto desplegado en el VPS
 
+http://18.224.58.147/t3_act8_eq11/
+
+Respaldo en GitHub Pages: https://eduardoy24.github.io/t3_act8_eq11/
+
 
 ## Funcionalidades
 

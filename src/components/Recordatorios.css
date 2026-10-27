@@ -1,0 +1,47 @@
+.recordatorios {
+  max-width: 420px;
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recordatorios h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: var(--color-texto);
+}
+
+.recordatorios label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.recordatorios input {
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.recordatorios button {
+  margin-top: 8px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-primario);
+  color: var(--color-blanco);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recordatorios-mensaje {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--color-texto-suave);
+}

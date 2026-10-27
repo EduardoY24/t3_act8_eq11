@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import TodosTable from '../components/TodosTable';
 import SummaryCards from '../components/SummaryCards';
+import Recordatorios from '../components/Recordatorios';
 import './DashboardPage.css';
 
 // Titulo que sale en el navbar segun la opcion del menu
@@ -80,7 +81,9 @@ function DashboardPage({ user, onLogout }) {
             />
           )}
 
-          {(seccion === 'recordatorios' || seccion === 'configuracion') && (
+          {seccion === 'recordatorios' && <Recordatorios />}
+
+          {seccion === 'configuracion' && (
             <p className="dashboard-vacio">Esta sección todavía está en construcción.</p>
           )}
         </main>

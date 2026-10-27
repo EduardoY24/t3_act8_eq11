@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import LoginPage from './pages/LoginPage';
 import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+
+// Titulo que sale en el navbar segun la opcion del menu
+const titulos = {
+  inicio: 'Inicio',
+  agenda: 'Mi agenda',
+  recordatorios: 'Recordatorios',
+  configuracion: 'Configuración',
+};
 
 function App() {
   // Aqui guardamos al usuario que inicio sesion (null = nadie ha entrado)
@@ -19,17 +28,18 @@ function App() {
     return <LoginPage onLogin={setUser} />;
   }
 
-  // Pantalla temporal del sistema, luego le agregamos el navbar y la tabla
+  // Pantalla del sistema: sidebar a la izquierda, navbar arriba y el contenido abajo
   return (
     <div style={{ display: 'flex' }}>
       <Sidebar seccionActiva={seccion} onCambiarSeccion={setSeccion} />
 
-      <main style={{ padding: '32px' }}>
-        <img src={user.image} alt="Foto de perfil" width="64" />
-        <h1>Hola, {user.firstName} {user.lastName}</h1>
-        <p>Estás en: {seccion}</p>
-        <button onClick={handleLogout}>Cerrar sesión</button>
-      </main>
+      <div style={{ flex: 1 }}>
+        <Navbar titulo={titulos[seccion]} user={user} onLogout={handleLogout} />
+
+        <main style={{ padding: '32px' }}>
+          <p>Aquí va el contenido de: {titulos[seccion]}</p>
+        </main>
+      </div>
     </div>
   );
 }

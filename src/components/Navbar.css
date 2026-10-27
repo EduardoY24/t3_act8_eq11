@@ -1,0 +1,60 @@
+/* Barra blanca de arriba */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-blanco);
+  border-bottom: 1px solid var(--color-borde);
+  padding: 16px 32px;
+}
+
+.navbar-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+/* Foto, nombre y boton juntos a la derecha */
+.navbar-usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Foto redonda */
+.navbar-foto {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-primario-claro);
+}
+
+.navbar-nombre {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.navbar-username {
+  font-size: 12px;
+  color: var(--color-texto-suave);
+}
+
+/* Boton de cerrar sesion */
+.navbar-salir {
+  margin-left: 12px;
+  padding: 8px 16px;
+  background-color: var(--color-blanco);
+  color: var(--color-peligro);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.navbar-salir:hover {
+  background-color: var(--color-peligro-claro);
+}

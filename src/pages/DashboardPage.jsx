@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import TodosTable from '../components/TodosTable';
+import SummaryCards from '../components/SummaryCards';
 import './DashboardPage.css';
 
 // Titulo que sale en el navbar segun la opcion del menu
@@ -67,7 +68,9 @@ function DashboardPage({ user, onLogout }) {
         <Navbar titulo={titulos[seccion]} user={user} onLogout={onLogout} />
 
         <main className="dashboard-contenido">
-          {seccion === 'agenda' ? (
+          {seccion === 'inicio' && <SummaryCards />}
+
+          {seccion === 'agenda' && (
             <TodosTable
               page={page}
               limit={limit}
@@ -75,7 +78,9 @@ function DashboardPage({ user, onLogout }) {
               onLimitChange={handleLimitChange}
               userId={user.id}
             />
-          ) : (
+          )}
+
+          {(seccion === 'recordatorios' || seccion === 'configuracion') && (
             <p className="dashboard-vacio">Esta sección todavía está en construcción.</p>
           )}
         </main>

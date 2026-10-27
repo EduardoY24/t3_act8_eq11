@@ -21,7 +21,7 @@ function LoginPage({ onLogin }) {
     // Revisamos que no esten vacios antes de llamar a la API
     if (username.trim() === '' || password.trim() === '') {
       setError('Escribe tu usuario y contraseña');
-      return; // aquí se detiene, ya no llama a la API
+      return; // aquí se detiene y ya no llama a la API
     }
 
     // Mandamos los datos a DummyJSON
@@ -31,7 +31,7 @@ function LoginPage({ onLogin }) {
       const usuario = await loginUser(username, password);
       onLogin(usuario); // le pasamos el usuario a App para entrar al sistema
     } catch (err) {
-      setError(err.message); // "Usuario o contraseña incorrectos"
+      setError(err.message); // Marca Usuario o contraseña incorrectos
     } finally {
       setCargando(false);
     }

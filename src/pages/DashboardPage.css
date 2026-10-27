@@ -17,3 +17,18 @@
 .dashboard-vacio {
   color: var(--color-texto-suave);
 }
+/* Para que la tabla no empuje el ancho de la pagina */
+.dashboard-derecha {
+  min-width: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .dashboard-contenido {
+    padding: 16px;
+  }
+}

@@ -137,3 +137,33 @@
   background-color: var(--color-peligro-claro);
   color: var(--color-peligro);
 }
+/* ---------- Responsive ---------- */
+/* La tabla se desliza de lado en vez de aplastarse */
+.todos-table {
+  min-width: 560px;
+}
+
+@media (max-width: 600px) {
+  .todos-toolbar {
+    padding: 16px;
+  }
+
+  .todos-search {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .todos-select {
+    flex: 1;
+  }
+
+  .todos-new-button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .todos-table th,
+  .todos-table td {
+    padding: 10px 12px;
+  }
+}

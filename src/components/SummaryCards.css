@@ -42,3 +42,14 @@
 .summary-message-error {
   color: var(--color-peligro);
 }
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .summary-number {
+    font-size: 28px;
+  }
+}

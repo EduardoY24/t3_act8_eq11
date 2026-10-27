@@ -60,3 +60,16 @@
   opacity: 0.4;
   cursor: not-allowed;
 }
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pagination-boton {
+    width: 32px;
+    height: 32px;
+  }
+}

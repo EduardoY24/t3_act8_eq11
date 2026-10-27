@@ -173,3 +173,36 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .login-left {
+    padding: 32px 24px;
+  }
+
+  .login-left h1 {
+    font-size: 24px;
+  }
+
+  .login-right {
+    padding: 32px 16px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-ilustracion {
+    display: none;
+  }
+
+  .login-card {
+    padding: 24px 16px;
+  }
+}

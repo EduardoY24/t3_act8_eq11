@@ -158,3 +158,18 @@
   height: 1px;
   background-color: #E2E8F0;
 }
+
+/* Mensaje de error (rojo) */
+.login-error {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Botón mientras está cargando */
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

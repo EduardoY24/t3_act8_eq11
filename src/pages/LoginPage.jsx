@@ -3,7 +3,7 @@ import ilustracion from '../assets/ilustracion-login.png';
 import { useState } from 'react';
 import { loginUser } from '../services/authApi';
 
-function LoginPage() {
+function LoginPage({ onLogin }) {
   // Lo que el usuario escribe
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -14,22 +14,22 @@ function LoginPage() {
   // true mientras esperamos la respuesta de la API
   const [cargando, setCargando] = useState(false);
 
-  // Se ejecuta al darle clic a "Entrar"
+  // Metodo para iniciar sesion, se ejecuta al darle clic a Entrar
   async function handleSubmit(e) {
     e.preventDefault(); // para que la página no se recargue
 
-    // 1. Revisar que no estén vacíos
+    // Revisamos que no esten vacios antes de llamar a la API
     if (username.trim() === '' || password.trim() === '') {
       setError('Escribe tu usuario y contraseña');
       return; // aquí se detiene, ya no llama a la API
     }
 
-    // 2. Mandar los datos a DummyJSON
+    // Mandamos los datos a DummyJSON
     try {
       setCargando(true);
       setError('');
       const usuario = await loginUser(username, password);
-      console.log('Usuario que entró:', usuario);
+      onLogin(usuario); // le pasamos el usuario a App para entrar al sistema
     } catch (err) {
       setError(err.message); // "Usuario o contraseña incorrectos"
     } finally {

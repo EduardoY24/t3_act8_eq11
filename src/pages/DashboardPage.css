@@ -1,0 +1,19 @@
+/* Sidebar a la izquierda y el resto a la derecha */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-derecha {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-contenido {
+  padding: 32px;
+}
+
+.dashboard-vacio {
+  color: var(--color-texto-suave);
+}

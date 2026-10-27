@@ -1,16 +1,48 @@
-# React + Vite
+# t3_act8_eq11 - Habitos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini sistema web en React con login, sidebar, navbar y una tabla de tareas con filtros, paginación y acciones CRUD. Está basado en el mockup de Figma de la Actividad 7.
 
-Currently, two official plugins are available:
+## Integrantes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Mendoza Martinez Eduardo Yael
+- Ruiz Chavez Youri Jorkaeff
 
-## React Compiler
+## APIs utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Login: DummyJSON Auth (https://dummyjson.com/auth/login)
+- Tabla de datos: DummyJSON Todos (https://dummyjson.com/todos)
 
-## Expanding the ESLint configuration
+## Proyecto desplegado en el VPS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Funcionalidades
+
+- Login con validación de campos vacíos y mensaje de error si los datos son incorrectos.
+- Vista del sistema protegida: sin iniciar sesión no se puede ver.
+- Sidebar con 4 secciones (Inicio, Agenda, Recordatorios y Configuración) y navbar con foto, nombre del usuario y botón de cerrar sesión.
+- Inicio: tarjetas de resumen (total, pendientes y completadas).
+- Agenda: tabla con búsqueda por texto, filtro por estado, paginación con selector de 10, 20, 40 o 50 registros y página reflejada en la URL (?page=2&limit=20).
+- CRUD: agregar, editar y eliminar tareas, con confirmación antes de editar y eliminar.
+- Diseño responsive para pantallas chicas.
+
+## Usuario de prueba
+
+- Usuario: emilys
+- Contraseña: emilyspass
+
+## Cómo ejecutarlo en tu computadora
+
+    npm install
+    npm run dev
+
+Abrir http://localhost:5173/t3_act8_eq11/
+
+## Estructura del proyecto
+
+    src/components   Sidebar, Navbar, TodosTable, TodoModal, Pagination...
+    src/pages        LoginPage y DashboardPage
+    src/services     Llamadas a la API (authApi.js y todosApi.js)
+
+## Nota sobre la API
+
+DummyJSON simula las escrituras: el POST, PUT y DELETE responden como si se hubiera guardado, pero no persiste. Por eso cada acción hace primero la petición real a la API y después refleja el cambio en el estado local (useState) para que la tabla se actualice.
